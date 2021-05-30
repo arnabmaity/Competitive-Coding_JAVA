@@ -4,10 +4,25 @@ import java.util.*;
 
 public class TwoSumSol {
     public static void main(String args[]) {
-        Sol1 sol1 = new Sol1();
-        sol1.solve();
-        Sol2 sol2 = new Sol2();
-        sol2.solve();
+        solve();
+    }
+
+    public static void solve() {
+//        Sol1 solver = new Sol1();
+        Sol2 solver = new Sol2();
+        Scanner sc = new Scanner(System.in);
+        long testCases = sc.nextLong();
+        for (long test = 0; test < testCases; test++) {
+            int arraySize = sc.nextInt();
+            int[] nums = new int[arraySize];
+            for (int i = 0; i < arraySize; i++) {
+                nums[i] = sc.nextInt();
+            }
+            int target = sc.nextInt();
+            int[] result = new int[2];
+            result = solver.twoSum(nums, target);
+            System.out.println(Arrays.toString(result));
+        }
     }
 }
 
@@ -23,8 +38,7 @@ class Sol2 {
             if (numberIndexMap.containsKey(otherSum)) {
                 setResult(result, j, numberIndexMap, i, otherSum);
                 break;
-            }
-            else {
+            } else {
                 numberIndexMap.put(nums[i], i);
             }
         }
@@ -35,22 +49,6 @@ class Sol2 {
         result[j] = numberIndexMap.get(otherSum);
         j++;
         result[j] = i;
-    }
-
-    public void solve() {
-        Scanner sc = new Scanner(System.in);
-        long testCases = sc.nextLong();
-        for (long test = 0; test < testCases; test++) {
-            int arraySize = sc.nextInt();
-            int[] nums = new int[arraySize];
-            for (int i = 0; i < arraySize; i++) {
-                nums[i] = sc.nextInt();
-            }
-            int target = sc.nextInt();
-            int[] result = new int[2];
-            result = twoSum(nums, target);
-            System.out.println(Arrays.toString(result));
-        }
     }
 }
 
@@ -94,22 +92,6 @@ class Sol1 {
                     break;
                 }
             }
-        }
-    }
-
-    public void solve() {
-        Scanner sc = new Scanner(System.in);
-        long testCases = sc.nextLong();
-        for (long test = 0; test < testCases; test++) {
-            int arraySize = sc.nextInt();
-            int[] nums = new int[arraySize];
-            for (int i = 0; i < arraySize; i++) {
-                nums[i] = sc.nextInt();
-            }
-            int target = sc.nextInt();
-            int[] result = new int[2];
-            result = twoSum(nums, target);
-            System.out.println(Arrays.toString(result));
         }
     }
 }
