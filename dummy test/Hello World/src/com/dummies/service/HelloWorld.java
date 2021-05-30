@@ -22,7 +22,7 @@ class Solver {
     }
 
     public String solve(long n, long m) {
-//        System.out.println("Hello World " + n + "\n" + "Dummies World");
+        System.out.println("Hello World " + n + "\n" + "Dummies World");
         return doAddition(n, m);
     }
 
