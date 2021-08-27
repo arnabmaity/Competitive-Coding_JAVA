@@ -54,6 +54,14 @@ class Solver {
     }
 
     public void getBlocked(int A, int B, int C, int D, ArrayList<Integer> E, ArrayList<Integer> F, int[][] blocked) {
+        /* the idea is to start traversing the rectangle co-ordinates one by one
+        from each (i,j) i have 8 choices to move , for doing this i will use
+        queue and visited array , visited help in reducing same call
+        at each (i,j) i will first check wheter the point lies inside any circle or
+        not by calculating it distance from centre of each circle ,if distance is greater than
+        r then point lies outside the circle , after my queue is empty if the (x,y)
+        co-ordinate is marked as visited means it is possible to reach there */
+
         for (int i = 0; i <= A; i++) {
             for (int j = 0; j <= B; j++) {
                 for (int k = 0; k < C; k++) {
