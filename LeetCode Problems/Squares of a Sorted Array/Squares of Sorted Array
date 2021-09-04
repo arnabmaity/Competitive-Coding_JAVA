@@ -21,3 +21,5 @@ Constraints:
 nums is sorted in non-decreasing order.
 
 Problem link : https://leetcode.com/problems/squares-of-a-sorted-array/
+
+Hint : since the array is sorted so its just like merging two sorted array consisting of  negs and pos values using two pointer technique.
