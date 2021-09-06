@@ -32,7 +32,6 @@ class LRUCache {
             cache.remove(keyToRemove);
         }
         cache.put(key, value);
-        Iterator<Map.Entry<Integer, Integer>> iterator = cache.entrySet().iterator();
     }
 }
 
