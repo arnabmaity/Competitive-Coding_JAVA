@@ -10,10 +10,9 @@ class LRUCache {
     }
 
     public int get(int key) {
-        if(!cache.containsKey(key)) {
+        if (!cache.containsKey(key)) {
             return -1;
-        }
-        else {
+        } else {
             int value = cache.get(key); // since it is the last accesses so setting that according to it
             cache.remove(key);
             cache.put(key, value);
@@ -22,12 +21,12 @@ class LRUCache {
     }
 
     public void put(int key, int value) {
-        if(cache.containsKey(key)) { // modifying the key element
+        if (cache.containsKey(key)) { // modifying the key element
             cache.remove(key);
             cache.put(key, value);
             return;
         }
-        if(cache.size()==CACHE_SIZE) { // if key is not present then check for size
+        if (cache.size() == CACHE_SIZE) { // if key is not present then check for size
             int keyToRemove = cache.entrySet().iterator().next().getKey();
             cache.remove(keyToRemove);
         }
