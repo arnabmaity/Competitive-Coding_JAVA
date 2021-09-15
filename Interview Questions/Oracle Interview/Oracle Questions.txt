@@ -1,0 +1,21 @@
+1. jdk, jre, jvm
+
+2. Singleton class
+
+3. Access modifiers --> whether grandchild can access parents protected/private objects/methods
+
+4. Exceptions
+
+5. File Reading in java
+
+6. Finally block --> when finally will not get executed
+
+7. Memory --JVM
+
+8. Authentication vs Authorization
+
+9. Two sum--> print all pairs
+
+10. HTTP status codes
+
+11. POST vs PUT
